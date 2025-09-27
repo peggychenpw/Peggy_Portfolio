@@ -1,54 +1,106 @@
 .worklist {
-  ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    li {
-      width: 45%;
-      margin-bottom: 45px;
-      a {
-        display: inline-flex;
-        justify-content: space-between;
-        .cover {
-          img {
-            width: 100px;
-            border-radius: 5px;
-            box-shadow: 2px 2px 2px rgba(53, 52, 52, 0.6);
-          }
-          img:hover {
-            width: 102px;
-            border-radius: 5px;
-          }
+  width: 100%;
+}
 
-        }
-        .workbrief {
-          text-align: left;
-          padding-left: 15px;
-          h3 {
-            font-size: 18px;
-            color: rgb(51, 51, 51);
-          }
-          p {
-            padding: 8px 0px;
-            color: rgba(0, 0, 0, 0.7);
-            line-height: 1.8;
-          }
-          .tag {
-            display: flex;
-            justify-content: flex-start;
-            flex-wrap: wrap;
-            span {
-              color: rgba(0, 0, 0, 0.55);
-              font-size: 14px;
-            }
-            span:not(:last-child)::after {
-              content: "•";
-              padding: 0px 0.5em;
-            }
-          }
-        }
-      }
-    }
+.worklist ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.worklist li a {
+  display: block;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 480px;
+}
+
+.cover {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.workbrief {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.workbrief h3 {
+  margin: 0 0 6px;
+  color: #222;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+.workbrief p {
+  margin: 0;
+  color: #555;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.tag {
+  margin-top: 8px;
+}
+.tag span {
+  display: inline-block;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  padding: 2px 8px;
+  font-size: 12px;
+  color: #333;
+  background: #f3f3f3;
+  border-radius: 999px;
+}
+
+.worklist li a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+@media (max-width: 640px) {
+  .worklist ul {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .workbrief {
+    padding: 14px;
+  }
+  .worklist li a {
+    min-height: 380px;
   }
 }
+
+/* removed legacy flex-based layout that conflicted with the grid */

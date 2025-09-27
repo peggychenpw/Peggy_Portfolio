@@ -4,14 +4,14 @@
   "data": [
     {
       "title": "Melaleuca JP",
-      "brief": "The largest online wellness shopping club for the Japanese market. Melaleuca is an international wellness and direct marketing company founded in 1985, offering over 450 health, personal care, and home care products",
+      "brief": "The largest online wellness shopping club for the Japanese market.",
       "cover": "/image/JP.png",
       "id": 1,
       "link": "https://jp.melaleuca.com/"
     },
     {
       "title": "Melaleuca KR",
-      "brief": "The largest online wellness shopping club for the Korean market. Melaleuca is an international wellness and direct marketing company founded in 1985, offering over 450 health, personal care, and home care products",
+      "brief": "The largest online wellness shopping club for the Korean market.",
       "cover": "/image/KR.png",
       "id": 2,
       "link": "https://kr.melaleuca.com/"
@@ -36,7 +36,7 @@
     },
     {
       "title": "Tarotpedia",
-      "brief": "A Tarot card dictionary with a simple search feature. You can also draw your tarot cards and get your card readings",
+      "brief": "A Tarot card dictionary with a simple search feature. You can also draw your tarot cards.",
       "tags": [
         "react",
         "sass",

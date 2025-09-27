@@ -7,7 +7,7 @@ const WorkPage = () => {
   return (
     <div className={styles.wrap}>
       <div className={styles.title}>
-        <h3><span>Projects</span></h3>
+        <h3><span>Recent Work</span></h3>
       </div>
       <WorkList dataSource={datas.data}></WorkList>
     </div>
