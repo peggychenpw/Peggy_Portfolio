@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Peggy_Portfolio/static/css/main.0b101bdc.chunk.css",
+    "main.js": "/Peggy_Portfolio/static/js/main.d4fea397.chunk.js",
+    "main.js.map": "/Peggy_Portfolio/static/js/main.d4fea397.chunk.js.map",
+    "runtime-main.js": "/Peggy_Portfolio/static/js/runtime-main.d4db6d14.js",
+    "runtime-main.js.map": "/Peggy_Portfolio/static/js/runtime-main.d4db6d14.js.map",
+    "static/js/2.5195f722.chunk.js": "/Peggy_Portfolio/static/js/2.5195f722.chunk.js",
+    "static/js/2.5195f722.chunk.js.map": "/Peggy_Portfolio/static/js/2.5195f722.chunk.js.map",
+    "index.html": "/Peggy_Portfolio/index.html",
+    "precache-manifest.9424755ce70cd4f53aaa2969420c7097.js": "/Peggy_Portfolio/precache-manifest.9424755ce70cd4f53aaa2969420c7097.js",
+    "service-worker.js": "/Peggy_Portfolio/service-worker.js",
+    "static/css/main.0b101bdc.chunk.css.map": "/Peggy_Portfolio/static/css/main.0b101bdc.chunk.css.map",
+    "static/js/2.5195f722.chunk.js.LICENSE.txt": "/Peggy_Portfolio/static/js/2.5195f722.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d4db6d14.js",
+    "static/js/2.5195f722.chunk.js",
+    "static/css/main.0b101bdc.chunk.css",
+    "static/js/main.d4fea397.chunk.js"
+  ]
+}
