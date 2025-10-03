@@ -1,9 +1,22 @@
-import React from "react";
-import styles from "./work.module.scss";
+import React, { useEffect } from "react";
+import { useHistory } from "react-router-dom";
+import styles from "work.module.scss";
 import datas from "../works";
 import WorkList from "../../components/WorkList/index";
 
 const WorkPage = () => {
+  const history = useHistory();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 200) {
+        history.push("/about");
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [history]);
+
   return (
     <div className={styles.wrap}>
       <div className={styles.title}>
