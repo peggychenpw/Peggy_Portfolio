@@ -1,12 +1,29 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import styles from "./Header.module.scss";
+
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const history = useHistory();
 
   const toggleMenu = () => setMenuOpen((prev) => !prev);
   const closeMenu = () => setMenuOpen(false);
+
+  // 平滑滑動到指定區塊
+  const scrollToSection = (id) => {
+    closeMenu();
+    if (history.location.pathname !== "/") {
+      history.push("/");
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      }, 300);
+    } else {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div className={styles.headerInner}>
@@ -20,10 +37,26 @@ const Header = () => {
         <NavLink exact to="/" activeClassName={styles.selected} onClick={closeMenu}>
           Home
         </NavLink>
-        <NavLink to="/work" activeClassName={styles.selected} onClick={closeMenu}>
-          Recent Work
+        <NavLink
+          to="#recent-work-section"
+          activeClassName={styles.selected}
+          className={styles.navLink}
+          onClick={e => {
+            e.preventDefault();
+            scrollToSection("recent-work-section");
+          }}
+        >
+          Recent Works
         </NavLink>
-        <NavLink to="/about" activeClassName={styles.selected} onClick={closeMenu}>
+        <NavLink
+          to="#about-section"
+          activeClassName={styles.selected}
+          className={styles.navLink}
+          onClick={e => {
+            e.preventDefault();
+            scrollToSection("about-section");
+          }}
+        >
           About
         </NavLink>
       </nav>

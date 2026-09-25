@@ -1,10 +1,8 @@
 import React from "react";
 import styles from "./App.module.scss";
 import HomePage from "./HomePage/index";
-import WorkPage from "./WorkPage/index";
-import AboutPage from "./AboutPage";
 import Header from "../components/Header";
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 
 const App = () => {
@@ -18,9 +16,6 @@ const App = () => {
       <main className={styles.content}>
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route exact path="/work" component={WorkPage} />
-          <Route exact path="/about" component={AboutPage} />
-          <Redirect to="/" />
         </Switch>
       </main>
       <footer className={styles.footer}>
