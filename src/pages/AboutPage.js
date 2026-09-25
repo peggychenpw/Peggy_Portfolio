@@ -8,13 +8,13 @@ const AboutPage = () => {
       </div>
       <h1 style={{ fontSize: 32, marginBottom: 12 }}>About</h1>
       <p style={{ color: "#444", marginBottom: 10 }}>
-        I’m Peggy, a front-end developer focused on building simple, enjoyable products.
+        I’m Peggy, a UX developer focused on building simple, enjoyable products.
       </p>
       <p style={{ color: "#444", marginBottom: 10 }}>
         I care about performance, accessibility, and thoughtful UI.
       </p>
       <p style={{ color: "#444", marginBottom: 10 }}>
-        Based in Taipei. Contact: <a href="mailto:peggy.chen.pw@gmail.com">peggy.chen.pw@gmail.com</a>
+       Contact: <a href="mailto:peggy.chen.pw@gmail.com">peggy.chen.pw@gmail.com</a>
       </p>
     </div>
   );
