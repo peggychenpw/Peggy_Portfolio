@@ -16,7 +16,7 @@ const HomePage = () => {
         <div className={styles.avatar}>
           <img src={`${process.env.PUBLIC_URL}/image/myPhoto.png`} alt="Peggy Chen" />
         </div>
-        <h1>Hi! I’m Peggy, a UX developer who gets good ideas shipped.</h1>
+        <h1>Hi! I’m Peggy, an HCI master’s student at UC Santa Cruz.</h1>
         <h2>I transform complex problems into helpful, enjoyable products.</h2>
   <p className={styles.sub}>I’m also a photographer / a curious learner / based in San Jose, CA</p>
       </div>
