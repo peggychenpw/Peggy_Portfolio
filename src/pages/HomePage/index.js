@@ -36,10 +36,13 @@ const HomePage = () => {
         </div>
         <h1 style={{ fontSize: 32, marginBottom: 12 }}>About</h1>
         <p style={{ color: "#444", marginBottom: 10 }}>
-          I’m Peggy, a UX developer focused on building simple, enjoyable products.
+          I’m Peggy Chen, a UX developer focused on building simple, enjoyable products.
         </p>
         <p style={{ color: "#444", marginBottom: 10 }}>
           I care about performance, accessibility, and thoughtful UI.
+        </p>
+        <p style={{ color: "#444", marginBottom: 10 }}>
+          Open to HCI / UX and UX Engineer opportunities
         </p>
         <p style={{ color: "#444", marginBottom: 10 }}>
           Contact: <a href="mailto:peggy.chen.pw@gmail.com">peggy.chen.pw@gmail.com</a>
