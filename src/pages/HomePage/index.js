@@ -17,8 +17,8 @@ const HomePage = () => {
           <img src={`${process.env.PUBLIC_URL}/image/myPhoto.png`} alt="Peggy Chen" />
         </div>
         <h1>Hi! I’m Peggy, an HCI master’s student at UC Santa Cruz.</h1>
-        <h2>I transform complex problems into helpful, enjoyable products.</h2>
-  <p className={styles.sub}>I’m also a photographer / a curious learner / based in San Jose, CA</p>
+        <h2>I am a UX developer focused on building simple, enjoyable products.</h2>
+  <p className={styles.sub}>Open to HCI / UX and UX Engineer opportunities.</p>
       </div>
   {/* Recent WORK 區塊 */}
   <div ref={workRef} id="recent-work-section" style={{ marginTop: 80 }}>
@@ -36,13 +36,13 @@ const HomePage = () => {
         </div>
         <h1 style={{ fontSize: 32, marginBottom: 12 }}>About</h1>
         <p style={{ color: "#444", marginBottom: 10 }}>
-          I’m Peggy Chen, a UX developer focused on building simple, enjoyable products.
+          I’m Peggy Chen, I transform complex problems into helpful, enjoyable products.
         </p>
         <p style={{ color: "#444", marginBottom: 10 }}>
           I care about performance, accessibility, and thoughtful UI.
         </p>
         <p style={{ color: "#444", marginBottom: 10 }}>
-          Open to HCI / UX and UX Engineer opportunities
+         I’m also a photographer / a curious learner / based in San Jose, CA
         </p>
         <p style={{ color: "#444", marginBottom: 10 }}>
           Contact: <a href="mailto:peggy.chen.pw@gmail.com">peggy.chen.pw@gmail.com</a>
