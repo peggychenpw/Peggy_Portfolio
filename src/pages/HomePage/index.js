@@ -36,7 +36,7 @@ const HomePage = () => {
         </div>
         <h1 style={{ fontSize: 32, marginBottom: 12 }}>About</h1>
         <p style={{ color: "#444", marginBottom: 10 }}>
-          I’m Peggy Chen, I transform complex problems into helpful, enjoyable products.
+          I’m Peggy Chen, I transform complex problems into helpful products.
         </p>
         <p style={{ color: "#444", marginBottom: 10 }}>
           I care about performance, accessibility, and thoughtful UI.
