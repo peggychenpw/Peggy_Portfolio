@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./home.module.scss";
 import WorkList from "../../components/WorkList";
-import scrollToSection from "../../utils/scrollToSection";
 
 const projects = [
   {
@@ -86,7 +85,7 @@ const HomePage = () => (
         <h1 id="intro-title">I make digital experiences feel <em>clear, useful, and human.</em></h1>
         <p className={styles.intro}>I’m Pingwei Chen, an HCI graduate student and UX-focused front-end developer. I bring together thoughtful interface design, careful implementation, and a photographer’s eye for detail.</p>
         <div className={styles.heroLinks}>
-          <a className={styles.primaryLink} href="#work" onClick={(event) => { event.preventDefault(); scrollToSection("work"); }}>Explore selected work <span aria-hidden="true">↘</span></a>
+          <a className={styles.primaryLink} href="#work">Explore selected work <span aria-hidden="true">↘</span></a>
           <a href="mailto:peggy.chen.pw@gmail.com">Get in touch</a>
         </div>
       </div>

@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./App.module.scss";
 import HomePage from "./HomePage/index";
 import Header from "../components/Header";
-import { Switch, Route } from "react-router-dom";
 
 
 const App = () => {
@@ -14,10 +13,7 @@ const App = () => {
         </div>
       </header>
       <main className={styles.content}>
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route component={HomePage} />
-        </Switch>
+        <HomePage />
       </main>
       <footer className={styles.footer}>
         <p>© {new Date().getFullYear()} Pingwei Chen</p>
