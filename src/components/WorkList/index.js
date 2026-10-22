@@ -12,7 +12,7 @@ export default function WorkList({ dataSource = [] }) {
               <span className={styles.openIcon} aria-hidden="true">↗</span>
             </div>
             <div className={styles.workbrief}>
-              <div className={styles.projectMeta}><span>{item.client}</span><span>{item.year}</span></div>
+              <div className={styles.projectMeta}><span>{item.client}</span>{item.year && <span>{item.year}</span>}</div>
               <h3>{item.title}</h3>
               <p>{item.brief}</p>
               <span className={styles.projectType}>{item.type}</span>
