@@ -1,19 +1,20 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./Header.module.scss";
+import scrollToSection from "../../utils/scrollToSection";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const buttonRef = useRef(null);
   const closeMenu = () => setMenuOpen(false);
   const handleSectionClick = (event) => {
-    if (!menuOpen) return;
-
     event.preventDefault();
     const sectionId = event.currentTarget.hash.slice(1);
-    closeMenu();
-    window.requestAnimationFrame(() => {
-      window.location.hash = sectionId;
-    });
+    if (menuOpen) {
+      closeMenu();
+      window.requestAnimationFrame(() => window.requestAnimationFrame(() => scrollToSection(sectionId)));
+      return;
+    }
+    scrollToSection(sectionId);
   };
 
   useEffect(() => {
