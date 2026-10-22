@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Peggy_Portfolio/static/css/main.25662941.chunk.css",
+    "main.css": "/Peggy_Portfolio/static/css/main.84636b22.chunk.css",
     "main.js": "/Peggy_Portfolio/static/js/main.60b3df83.chunk.js",
     "main.js.map": "/Peggy_Portfolio/static/js/main.60b3df83.chunk.js.map",
     "runtime-main.js": "/Peggy_Portfolio/static/js/runtime-main.d4db6d14.js",
@@ -8,15 +8,15 @@
     "static/js/2.6a0465ee.chunk.js": "/Peggy_Portfolio/static/js/2.6a0465ee.chunk.js",
     "static/js/2.6a0465ee.chunk.js.map": "/Peggy_Portfolio/static/js/2.6a0465ee.chunk.js.map",
     "index.html": "/Peggy_Portfolio/index.html",
-    "precache-manifest.7efac599552d6925b0b4e0dbe132e4a5.js": "/Peggy_Portfolio/precache-manifest.7efac599552d6925b0b4e0dbe132e4a5.js",
+    "precache-manifest.a716d7bceecb8dff0889befa851c4cc0.js": "/Peggy_Portfolio/precache-manifest.a716d7bceecb8dff0889befa851c4cc0.js",
     "service-worker.js": "/Peggy_Portfolio/service-worker.js",
-    "static/css/main.25662941.chunk.css.map": "/Peggy_Portfolio/static/css/main.25662941.chunk.css.map",
+    "static/css/main.84636b22.chunk.css.map": "/Peggy_Portfolio/static/css/main.84636b22.chunk.css.map",
     "static/js/2.6a0465ee.chunk.js.LICENSE.txt": "/Peggy_Portfolio/static/js/2.6a0465ee.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d4db6d14.js",
     "static/js/2.6a0465ee.chunk.js",
-    "static/css/main.25662941.chunk.css",
+    "static/css/main.84636b22.chunk.css",
     "static/js/main.60b3df83.chunk.js"
   ]
 }
