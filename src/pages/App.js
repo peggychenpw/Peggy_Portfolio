@@ -16,6 +16,7 @@ const App = () => {
       <main className={styles.content}>
         <Switch>
           <Route exact path="/" component={HomePage} />
+          <Route component={HomePage} />
         </Switch>
       </main>
       <footer className={styles.footer}>
