@@ -1,4 +1,4 @@
-.App { min-height: 100vh; overflow: hidden; background-color: #f7f8f5; background-image: linear-gradient(rgba(91, 113, 101, .045) 1px, transparent 1px), linear-gradient(90deg, rgba(91, 113, 101, .045) 1px, transparent 1px); background-size: 28px 28px; }
+.App { min-height: 100vh; background-color: #f7f8f5; background-image: linear-gradient(rgba(91, 113, 101, .045) 1px, transparent 1px), linear-gradient(90deg, rgba(91, 113, 101, .045) 1px, transparent 1px); background-size: 28px 28px; }
 .header { position: sticky; top: 0; z-index: 10; background: rgba(247, 248, 245, .94); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(212, 220, 215, .85); }
 .box { width: 100%; }
 .content { min-height: calc(100vh - 140px); }
