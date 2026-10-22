@@ -94,7 +94,6 @@ const HomePage = () => (
         <p>Based in San Jose, California<br />Open to UX and front-end opportunities</p>
         <a href="https://www.linkedin.com/in/peggy-cpw" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <span aria-hidden="true">↗</span></a>
       </aside>
-      <a className={styles.scrollCue} href="#work"><span aria-hidden="true">↓</span> Scroll to explore</a>
     </section>
 
     <section className={styles.workSection} id="work" aria-labelledby="work-title">
