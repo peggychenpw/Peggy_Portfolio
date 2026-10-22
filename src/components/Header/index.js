@@ -1,69 +1,36 @@
-import React, { useState } from "react";
-import { NavLink, useHistory } from "react-router-dom";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./Header.module.scss";
-
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const history = useHistory();
-
-  const toggleMenu = () => setMenuOpen((prev) => !prev);
+  const buttonRef = useRef(null);
   const closeMenu = () => setMenuOpen(false);
 
-  // 平滑滑動到指定區塊
-  const scrollToSection = (id) => {
-    closeMenu();
-    if (history.location.pathname !== "/") {
-      history.push("/");
-      setTimeout(() => {
-        const el = document.getElementById(id);
-        if (el) el.scrollIntoView({ behavior: "smooth" });
-      }, 300);
-    } else {
-      const el = document.getElementById(id);
-      if (el) el.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  useEffect(() => {
+    if (!menuOpen) return undefined;
+    const onKeyDown = (event) => {
+      if (event.key === "Escape") {
+        closeMenu();
+        buttonRef.current && buttonRef.current.focus();
+      }
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [menuOpen]);
 
   return (
     <div className={styles.headerInner}>
-      <NavLink to="/" className={styles.brand} onClick={closeMenu}>
-        Peggy Chen
-      </NavLink>
-      <button className={styles.menuButton} onClick={toggleMenu} aria-label={menuOpen ? "Close menu" : "Open menu"} aria-expanded={menuOpen} aria-controls="primary-navigation">
-        {menuOpen ? "Close Menu" : "Open Menu"}
+      <a href="#top" className={styles.brand} onClick={closeMenu} aria-label="Pingwei Chen, home">Pingwei Chen</a>
+      <button ref={buttonRef} className={styles.menuButton} type="button" onClick={() => setMenuOpen((open) => !open)} aria-expanded={menuOpen} aria-controls="primary-navigation">
+        <span>{menuOpen ? "Close" : "Menu"}</span><span aria-hidden="true" className={styles.menuGlyph}>{menuOpen ? "×" : "＋"}</span>
       </button>
-      <nav id="primary-navigation" className={`${styles.nav} ${menuOpen ? styles.open : ""}`}>
-        <NavLink exact to="/" activeClassName={styles.selected} onClick={closeMenu}>
-          Home
-        </NavLink>
-        <NavLink
-          to="#recent-work-section"
-          activeClassName={styles.selected}
-          className={styles.navLink}
-          onClick={e => {
-            e.preventDefault();
-            scrollToSection("recent-work-section");
-          }}
-        >
-          Recent Works
-        </NavLink>
-        <NavLink
-          to="#about-section"
-          activeClassName={styles.selected}
-          className={styles.navLink}
-          onClick={e => {
-            e.preventDefault();
-            scrollToSection("about-section");
-          }}
-        >
-          About
-        </NavLink>
+      <nav id="primary-navigation" aria-label="Main navigation" className={`${styles.nav} ${menuOpen ? styles.open : ""}`}>
+        <a href="#work" onClick={closeMenu}>Work</a>
+        <a href="#about" onClick={closeMenu}>About</a>
+        <a href="#contact" onClick={closeMenu}>Contact</a>
       </nav>
     </div>
   );
 };
 
 export default Header;
-
-

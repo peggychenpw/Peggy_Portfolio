@@ -1,32 +1,25 @@
 import React from "react";
 import styles from "./WorkList.module.scss";
 
-export default ({ dataSource }) => {
+export default function WorkList({ dataSource = [] }) {
   return (
     <div className={styles.worklist}>
-      <ul>
-        {dataSource &&
-          dataSource.map((item) => (
-            <li key={item.id}>
-              <a href={item.link} target="_blank" rel="noopener noreferrer">
-                <div className={styles.cover}>
-                  <img src={item.cover && item.cover.startsWith("http") ? item.cover : `${process.env.PUBLIC_URL}${item.cover && item.cover.startsWith("/") ? item.cover : `/${item.cover}`}` } alt="workImg" />
-                </div>
-                <div className={styles.workbrief}>
-                  <h3>{item.title}</h3>
-                  <p>{item.brief}</p>
-                  {item.tags && item.tags.length > 0 && (
-                    <div className={styles.tag}>
-                      {(item.tags || []).slice(0, 6).map((i) => (
-                        <span key={i}>{i}</span>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              </a>
-            </li>
-          ))}
-      </ul>
+      {dataSource.map((item) => (
+        <article className={`${styles.project} ${styles[item.className] || ""}`} key={item.id}>
+          <a className={styles.projectLink} href={item.link} target="_blank" rel="noopener noreferrer" aria-label={`${item.title} — view ${item.client} project (opens in a new tab)`}>
+            <div className={`${styles.cover} ${item.imagePosition === "top" ? styles.alignTop : ""} ${item.imageFit === "contain" ? styles.containImage : ""}`}>
+              <img src={`${process.env.PUBLIC_URL}${item.cover}`} alt={item.alt} loading="lazy" />
+              <span className={styles.openIcon} aria-hidden="true">↗</span>
+            </div>
+            <div className={styles.workbrief}>
+              <div className={styles.projectMeta}><span>{item.client}</span><span>{item.year}</span></div>
+              <h3>{item.title}</h3>
+              <p>{item.brief}</p>
+              <span className={styles.projectType}>{item.type}</span>
+            </div>
+          </a>
+        </article>
+      ))}
     </div>
   );
-};
+}

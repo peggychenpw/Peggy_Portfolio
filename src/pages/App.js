@@ -7,7 +7,7 @@ import { Switch, Route } from "react-router-dom";
 
 const App = () => {
   return (
-    <div className={styles.App}>
+    <div className={styles.App} id="top">
       <header className={styles.header}>
         <div className={styles.box}>
           <Header />
@@ -19,7 +19,7 @@ const App = () => {
         </Switch>
       </main>
       <footer className={styles.footer}>
-        <p>© {new Date().getFullYear()} Peggy Chen</p>
+        <p>© {new Date().getFullYear()} Pingwei Chen</p>
       </footer>
     </div>
   );
