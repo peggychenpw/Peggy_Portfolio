@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Peggy_Portfolio/static/css/main.84eea0a3.chunk.css",
-    "main.js": "/Peggy_Portfolio/static/js/main.115263a1.chunk.js",
-    "main.js.map": "/Peggy_Portfolio/static/js/main.115263a1.chunk.js.map",
+    "main.css": "/Peggy_Portfolio/static/css/main.09b619d0.chunk.css",
+    "main.js": "/Peggy_Portfolio/static/js/main.d54534f3.chunk.js",
+    "main.js.map": "/Peggy_Portfolio/static/js/main.d54534f3.chunk.js.map",
     "runtime-main.js": "/Peggy_Portfolio/static/js/runtime-main.d4db6d14.js",
     "runtime-main.js.map": "/Peggy_Portfolio/static/js/runtime-main.d4db6d14.js.map",
     "static/js/2.6a0465ee.chunk.js": "/Peggy_Portfolio/static/js/2.6a0465ee.chunk.js",
     "static/js/2.6a0465ee.chunk.js.map": "/Peggy_Portfolio/static/js/2.6a0465ee.chunk.js.map",
     "index.html": "/Peggy_Portfolio/index.html",
-    "precache-manifest.af9e78fc06834f1e5ee24232e2204127.js": "/Peggy_Portfolio/precache-manifest.af9e78fc06834f1e5ee24232e2204127.js",
+    "precache-manifest.b16efc2fc6bac24f3d2a613444a9ec93.js": "/Peggy_Portfolio/precache-manifest.b16efc2fc6bac24f3d2a613444a9ec93.js",
     "service-worker.js": "/Peggy_Portfolio/service-worker.js",
-    "static/css/main.84eea0a3.chunk.css.map": "/Peggy_Portfolio/static/css/main.84eea0a3.chunk.css.map",
+    "static/css/main.09b619d0.chunk.css.map": "/Peggy_Portfolio/static/css/main.09b619d0.chunk.css.map",
     "static/js/2.6a0465ee.chunk.js.LICENSE.txt": "/Peggy_Portfolio/static/js/2.6a0465ee.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d4db6d14.js",
     "static/js/2.6a0465ee.chunk.js",
-    "static/css/main.84eea0a3.chunk.css",
-    "static/js/main.115263a1.chunk.js"
+    "static/css/main.09b619d0.chunk.css",
+    "static/js/main.d54534f3.chunk.js"
   ]
 }
